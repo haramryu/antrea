@@ -172,6 +172,10 @@ func (s *CNIServer) loadNetworkConfig(request *cnipb.CniCmdRequest) (*CNIConfig,
 	if err := cnitypes.LoadArgs(request.CniArgs.Args, cniConfig.k8sArgs); err != nil {
 		return cniConfig, err
 	}
+	klog.Infof("cniConfig.k8sArgs cnitypes.CommonArgs: %s\n", cniConfig.k8sArgs.CommonArgs)
+	klog.Infof("cniConfig.k8sArgs K8S_POD_NAME: %s\n", cniConfig.k8sArgs.K8S_POD_NAME.UnmarshalText)
+	klog.Infof("cniConfig.k8sArgs K8S_POD_NAMESPACE: %s\n", cniConfig.k8sArgs.K8S_POD_NAMESPACE.UnmarshalText)
+	klog.Infof("cniConfig.k8sArgs K8S_POD_INFRA_CONTAINER_ID: %s\n", cniConfig.k8sArgs.K8S_POD_INFRA_CONTAINER_ID.UnmarshalText)
 	if !s.isChaining {
 		s.updateLocalIPAMSubnet(cniConfig)
 	}
