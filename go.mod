@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	github.com/TomCodeLV/OVSDB-golang-lib v0.0.0-20190103132138-cf96a9e61bd1
+	github.com/aws/aws-sdk-go v1.31.8 // indirect
 	github.com/blang/semver v3.5.0+incompatible
 	github.com/cenk/hub v1.0.1 // indirect
 	github.com/cenkalti/hub v1.0.1 // indirect
@@ -31,15 +32,15 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5
 	github.com/streamrail/concurrent-map v0.0.0-20160823150647-8bf1e9bacbf6 // indirect
-	github.com/stretchr/testify v1.4.0
+	github.com/stretchr/testify v1.5.1
 	github.com/vishvananda/netlink v1.1.0
 	github.com/vmware-tanzu/octant v0.10.2
 	golang.org/x/crypto v0.0.0-20200220183623-bac4c82f6975
 	golang.org/x/exp v0.0.0-20190312203227-4b39c73a6495
-	golang.org/x/net v0.0.0-20191126235420-ef20fe5d7933 // indirect
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 	golang.org/x/sys v0.0.0-20200122134326-e047566fdf82
 	google.golang.org/grpc v1.23.1
+	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df // indirect
 	gopkg.in/yaml.v2 v2.2.8
 	k8s.io/api v0.17.6
 	k8s.io/apimachinery v0.17.6
