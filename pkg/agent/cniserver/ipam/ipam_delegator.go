@@ -62,6 +62,11 @@ func (d *IPAMDelegator) Add(args *invoke.Args, networkConfig []byte) (*current.R
 func (d *IPAMDelegator) Del(args *invoke.Args, networkConfig []byte) error {
 	args.Command = "DEL"
 	klog.Infof("TESTTTT string(networkConfig): %d\n", string(networkConfig))
+	klog.Infof("TESTTTT args.ContainerID", args.ContainerID)
+	klog.Infof("TESTTTT args.IfName", args.IfName)
+	klog.Infof("TESTTTT args.NetNS", args.NetNS)
+	klog.Infof("TESTTTT args.Path", args.Path)
+	klog.Infof("TESTTTT args.PluginArgsStr", args.PluginArgsStr)
 	if err := delegateNoResult(d.pluginType, networkConfig, args); err != nil {
 		return err
 	}
